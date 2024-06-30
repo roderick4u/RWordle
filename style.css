@@ -1,0 +1,146 @@
+body {
+    background-color: beige;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 36px;
+    color: #333;
+}
+
+#guess-input {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 18px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#help-button, 
+#guess-button,
+#reset-button,
+#give-up-button { 
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #0CBABA;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#help-button:hover, 
+#guess-button:hover,
+#reset-button:hover,
+#give-up-button:hover {
+    background-color: #009d9d;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.letter-container {
+    display: inline-block;
+    border: 1px solid #333;
+    padding: 10px;
+    margin: 3px;
+    min-width: 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.correct {
+    background-color: #8eff8e;  /* Cambia el color cuando la letra es correcta */
+}
+
+.incorrect {
+    background-color: #ff8e8e;  /* Cambia el color cuando la letra es incorrecta */
+}
+
+.parcialCorrect {
+    background-color: #e4fd06;  /* Cambia el color cuando la letra es parcialmente correcta */
+}
+
+.input-area {
+    margin: 30px;
+    text-align: center;
+}
+
+#winning-message, #losing-message {
+    display: none;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+#winning-message {
+    color: green;
+}
+
+#losing-message {
+    color: red;
+}
+
+#boardScore {
+    position: relative;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #333;
+}
+
+#word {
+    display: block;
+    text-align: center;
+    box-sizing: content-box;
+}
+
+#wordAlert {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    color: #333;
+}
+
+@media screen and (max-width: 600px) {
+    #guess-input {
+        width: 100%;
+    }
+    #help-button,
+    #guess-button,
+    #reset-button,
+    #give-up-button {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    #give-up-button {
+        top: 10px;
+        right: 10px;
+        position: fixed;
+    }
+    #boardScore {
+        top: 10px;
+        left: 10px;
+        position: fixed;
+        font-size: 20px;
+    }
+    .row {
+        width: 100%;
+        margin-top: 30px;
+    }
+}
